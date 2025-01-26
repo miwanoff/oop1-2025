@@ -35,6 +35,8 @@ for ($i = 0; $i < count($cars); $i++) {
 
 echo $bmw->beep();
 echo "\n";
+echo $bmw;
+echo "\n";
 
 $emp1          = new Employee();
 $emp1->surname = "Борисенко";

@@ -27,4 +27,8 @@ class Car
         //     echo "!!!";
         // }
     }
+
+    function __toString() {
+        return "({$this->comp}, {$this->color})";
+    }
 }
