@@ -2,6 +2,7 @@
 
 require "Car.php";
 require "Employee.php";
+require "Company.php";
 
 $bmw      = new Car("BMW", 'blue');
 $mercedes = new Car("Mercedes Benz");
@@ -38,6 +39,9 @@ echo "\n";
 $emp1          = new Employee();
 $emp1->surname = "Борисенко";
 $emp1->name    = "Ігор";
+$emp2          = new Employee();
+$emp2->surname = "Максименко";
+$emp2->name    = "Денис";
 //$emp->age = 23 ; // Помилка
 // Виводимо властивості класу
 echo $emp1->surname . " " . $emp1->name . " " . "\n ";
@@ -49,3 +53,8 @@ if (! $emp1->set_age(23)) {
 echo $emp1->get_full_info(); // Борисов  Ігор  23
 
 //echo $emp1->get_age();
+$company = new Company();
+$company->set_name("Kit");
+$company->set_employees([$emp1, $emp2]);
+echo $company->get_name();
+print_r($company->get_employees());
